@@ -2,7 +2,7 @@
  * @Author: zw
  * @Date:   2017-12-27 15:47:16
  * @Last Modified by:   zw
- * @Last Modified time: 2017-12-27 17:27:15
+ * @Last Modified time: 2017-12-29 09:22:39
  */
 $(function() {
     addHistory();
@@ -15,8 +15,8 @@ function addHistory() {
     // 1. 给搜索按钮添加点击事件 
     $('.btn-search').on('click', function() {
         // 2. 获取输入框输入的搜索内容
-        // console.log($('.search-input').val());
-        var search = $('.search-input').val();
+        // console.log($('.search-input').val()); 去除空格
+        var search = $('.search-input').val().trim();
         if (!search) {
             alert('请输入要搜索的商品');
             return;
